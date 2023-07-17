@@ -1,5 +1,9 @@
 import express from "express";
 import colors from "colors";
+import dotenv from "dotenv";
+
+//configure env
+dotenv.config();
 
 //rest object
 const app = express();
