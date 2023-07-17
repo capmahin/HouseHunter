@@ -3,7 +3,7 @@ import Layout from "./../../components/Layout/Layout";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
-import "../../styles/AuthStyles.css";
+import "../../styles/AuthStyle.css";
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -86,17 +86,17 @@ const Register = () => {
             />
           </div>
           <div className="mb-3">
-            <select
+            <input
+             type="number"
               value={role}
               onChange={(e) => setRole(e.target.value)}
               className="form-control"
               id="exampleInputEmail1"
               placeholder="Enter Your Role"
               required
-              >
-                <option value="0">House rent</option>
-                <option value="1">House owner </option>
-              </select>
+              />
+                
+              
             
           </div>
           <button type="submit" className="btn btn-primary">
