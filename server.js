@@ -1,12 +1,17 @@
 import express from "express";
 import colors from "colors";
 import dotenv from "dotenv";
+import morgan from "morgan";
 
 //configure env
 dotenv.config();
 
 //rest object
 const app = express();
+
+//middleware
+app.use(express.json())
+app.use(morgan('dev'))
 
 //rest api
 
