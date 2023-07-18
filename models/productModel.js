@@ -6,6 +6,14 @@ const productSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    address: {
+      type: String,
+      required: true,
+    },
+    city: {
+      type: String,
+      required: true,
+    },
     slug: {
       type: String,
       required: true,
@@ -18,12 +26,28 @@ const productSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
+    phone: {
+        type: String,
+        required: true,
+      },
+    size:{
+        type: String,
+        required: true,
+      },
+    bedroom:{
+        type: String,
+        required: true,
+      },
+    bathroom:{
+        type: String,
+        required: true,
+      },
     category: {
       type: mongoose.ObjectId,
       ref: "Category",
       required: true,
     },
-    quantity: {
+    date: {
       type: Number,
       required: true,
     },
@@ -31,9 +55,7 @@ const productSchema = new mongoose.Schema(
       data: Buffer,
       contentType: String,
     },
-    shipping: {
-      type: Boolean,
-    },
+    
   },
   { timestamps: true }
 );

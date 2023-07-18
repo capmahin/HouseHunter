@@ -4,21 +4,33 @@ import slugify from "slugify";
 
 export const createProductController = async (req, res) => {
   try {
-    const { name, description, price, category, quantity, shipping } =
+    const { name, address,city, description, price,phone,size,bedroom,bathroom, category, date} =
       req.fields;
     const { photo } = req.files;
     //alidation
     switch (true) {
       case !name:
         return res.status(500).send({ error: "Name is Required" });
+      case !address:
+        return res.status(500).send({ error: "address is Required" });
+      case !city:
+        return res.status(500).send({ error: "city is Required" });
       case !description:
         return res.status(500).send({ error: "Description is Required" });
       case !price:
         return res.status(500).send({ error: "Price is Required" });
+      case !phone:
+        return res.status(500).send({ error: "phone number is Required" });
+      case !size:
+        return res.status(500).send({ error: "Room size is Required" });
+      case !bedroom:
+        return res.status(500).send({ error: "bedroom number is Required" });
+      case !bathroom:
+        return res.status(500).send({ error: "bathroom number is Required" });
       case !category:
         return res.status(500).send({ error: "Category is Required" });
-      case !quantity:
-        return res.status(500).send({ error: "Quantity is Required" });
+      case !date:
+        return res.status(500).send({ error: "Availability date is Required" });
       case photo && photo.size > 1000000:
         return res
           .status(500)
@@ -131,26 +143,38 @@ export const deleteProductController = async (req, res) => {
 //upate producta
 export const updateProductController = async (req, res) => {
   try {
-    const { name, description, price, category, quantity, shipping } =
-      req.fields;
-    const { photo } = req.files;
+    const { name, address,city, description, price,phone,size,bedroom,bathroom, category, date} =
+    req.fields;
+  const { photo } = req.files;
     //alidation
     switch (true) {
-      case !name:
-        return res.status(500).send({ error: "Name is Required" });
-      case !description:
-        return res.status(500).send({ error: "Description is Required" });
-      case !price:
-        return res.status(500).send({ error: "Price is Required" });
-      case !category:
-        return res.status(500).send({ error: "Category is Required" });
-      case !quantity:
-        return res.status(500).send({ error: "Quantity is Required" });
-      case photo && photo.size > 1000000:
-        return res
-          .status(500)
-          .send({ error: "photo is Required and should be less then 1mb" });
-    }
+        case !name:
+          return res.status(500).send({ error: "Name is Required" });
+        case !address:
+          return res.status(500).send({ error: "address is Required" });
+        case !city:
+          return res.status(500).send({ error: "city is Required" });
+        case !description:
+          return res.status(500).send({ error: "Description is Required" });
+        case !price:
+          return res.status(500).send({ error: "Price is Required" });
+        case !phone:
+          return res.status(500).send({ error: "phone number is Required" });
+        case !size:
+          return res.status(500).send({ error: "Room size is Required" });
+        case !bedroom:
+          return res.status(500).send({ error: "bedroom number is Required" });
+        case !bathroom:
+          return res.status(500).send({ error: "bathroom number is Required" });
+        case !category:
+          return res.status(500).send({ error: "Category is Required" });
+        case !date:
+          return res.status(500).send({ error: "Availability date is Required" });
+        case photo && photo.size > 1000000:
+          return res
+            .status(500)
+            .send({ error: "photo is Required and should be less then 1mb" });
+      }
 
     const products = await productModel.findByIdAndUpdate(
       req.params.pid,
