@@ -86,15 +86,17 @@ const Register = () => {
             />
           </div>
           <div className="mb-3">
-            <input
-             type="number"
+            <select
               value={role}
               onChange={(e) => setRole(e.target.value)}
               className="form-control"
               id="exampleInputEmail1"
               placeholder="Enter Your Role"
               required
-              />
+              >
+                <option value="1">House Owner</option>
+                <option value="0">House Rent</option>
+              </select>
                 
               
             
