@@ -273,7 +273,7 @@ const UpdateProduct = () => {
               <div className="mb-3">
                 <Select
                   bordered={false}
-                  placeholder="Select Shipping "
+                  placeholder="Select confirm "
                   size="large"
                   showSearch
                   className="form-select mb-3"
@@ -288,12 +288,12 @@ const UpdateProduct = () => {
               </div>
               <div className="mb-3">
                 <button className="btn btn-primary" onClick={handleUpdate}>
-                  UPDATE PRODUCT
+                  UPDATE House
                 </button>
               </div>
               <div className="mb-3">
                 <button className="btn btn-danger" onClick={handleDelete}>
-                  DELETE PRODUCT
+                  DELETE House
                 </button>
               </div>
             </div>

@@ -24,6 +24,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/search" element={<Search />} />
         <Route path="/product/:slug" element={<ProductDetails />} />
         <Route path="/CreateBooking" element={<CreateBooking />} />
         <Route path="/dashboard" element={<PrivateRoute />}>
