@@ -94,8 +94,9 @@ const Register = () => {
               placeholder="Enter Your Role"
               required
               >
-                <option value="1">House Owner</option>
-                <option value="0">House Rent</option>
+                 <option value="1">House Rent</option>
+                <option value="2">House Owner</option>
+               
               </select>
                 
               
