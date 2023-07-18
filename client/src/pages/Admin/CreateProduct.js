@@ -183,7 +183,7 @@ const CreateProduct = () => {
                 <input
                   type="number"
                   value={size}
-                  placeholder="write a size"
+                  placeholder="room a size"
                   className="form-control"
                   onChange={(e) => setSize(e.target.value)}
                 />
@@ -210,7 +210,7 @@ const CreateProduct = () => {
                 <input
                   type="number"
                   value={date}
-                  placeholder="write a quantity"
+                  placeholder="Add expire date"
                   className="form-control"
                   onChange={(e) => setDate(e.target.value)}
                 />
@@ -218,7 +218,7 @@ const CreateProduct = () => {
               <div className="mb-3">
                 <Select
                   bordered={false}
-                  placeholder="Select Shipping "
+                  placeholder="Confirm "
                   size="large"
                   showSearch
                   className="form-select mb-3"

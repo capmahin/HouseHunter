@@ -30,7 +30,7 @@ const Products = () => {
         </div>
         <div className="col-md-9 ">
           <h1 className="text-center">All Houses List</h1>
-          <div className="d-flex">
+          <div className="d-flex flex-wrap">
             {products?.map((p) => (
               <Link
                 key={p._id}
@@ -41,6 +41,7 @@ const Products = () => {
                   <img
                     src={`/api/v1/product/product-photo/${p._id}`}
                     className="card-img-top"
+                    height={300}
                     alt={p.name}
                   />
                   <div className="card-body">
