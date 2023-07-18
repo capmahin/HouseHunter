@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Layout from "./../../components/Layout/Layout";
-import AdminMenu from "./../../components/Layout/AdminMenu";
+import UserMenu from "./../../components/Layout/UserMenu";
 import toast from "react-hot-toast";
 import axios from "axios";
 import { Select } from "antd";
@@ -92,7 +92,7 @@ const UpdateBooking = () => {
       const { data } = await axios.delete(
         `/api/v1/booking/delete-booking/${id}`
       );
-      toast.success("Product DEleted Succfully");
+      toast.success("Booking Delete Successfully");
       navigate("/dashboard/user/orders");
     } catch (error) {
       console.log(error);
@@ -104,10 +104,10 @@ const UpdateBooking = () => {
       <div className="container-fluid m-3 p-3">
         <div className="row">
           <div className="col-md-3">
-            <AdminMenu />
+            <UserMenu />
           </div>
           <div className="col-md-9">
-            <h1>Update Product</h1>
+            <h1>Update Booking Details</h1>
             <div className="m-1 w-75">
               <Select
                 bordered={false}
@@ -167,12 +167,12 @@ const UpdateBooking = () => {
               </div>
               <div className="mb-3">
                 <button className="btn btn-primary" onClick={handleUpdate}>
-                  UPDATE PRODUCT
+                  UPDATE Booking Details
                 </button>
               </div>
               <div className="mb-3">
                 <button className="btn btn-danger" onClick={handleDelete}>
-                  DELETE PRODUCT
+                  DELETE Booking Details
                 </button>
               </div>
             </div>

@@ -136,7 +136,7 @@ const HomePage = () => {
           </div>
         </div>
         <div className="col-md-9 offset-1">
-          <h1 className="text-center">All Products</h1>
+          <h1 className="text-center">All Houses</h1>
           <div className="d-flex flex-wrap">
             {products?.map((p) => (
               <div className="card m-2" style={{ width: "18rem" }} key={p._id}>
@@ -157,7 +157,7 @@ const HomePage = () => {
                   >
                     More Details
                   </button>
-                  <button className="btn btn-success ms-1"  onClick={()=>navigate("/CreateBooking")} >Buy Now</button>
+                  <button className="btn btn-success ms-1"  onClick={()=>navigate("/CreateBooking")} >House Rent</button>
                 </div>
               </div>
             ))}

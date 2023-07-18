@@ -48,19 +48,26 @@ const ProductDetails = () => {
           />
         </div>
         <div className="col-md-6 ">
-          <h1 className="text-center">Product Details</h1>
+          <h1 className="text-center">House  Details</h1>
           <h6>Name : {product.name}</h6>
           <h6>Description : {product.description}</h6>
           <h6>Price : {product.price}</h6>
+          <h6>City: {product.city}</h6>
+          <h6>Address : {product.address}</h6>
+          <h6>Phone : {product.phone}</h6>
+          <h6>Size : {product.size}</h6>
+          <h6>Bedroom : {product.bedroom}</h6>
+          <h6>Bathroom : {product.bathroom}</h6>
+          <h6>Date : {product.date}</h6>
           <h6>Category : {product?.category?.name}</h6>
-          <button class="btn btn-secondary ms-1">ADD TO CART</button>
+          
         </div>
       </div>
       <hr />
       <div className="row container">
-        <h6>Similar Products</h6>
+        <h6>Similar Houses</h6>
         {relatedProducts.length < 1 && (
-          <p className="text-center">No Similar Products found</p>
+          <p className="text-center">No Similar Houses found</p>
         )}
         <div className="d-flex flex-wrap">
           {relatedProducts?.map((p) => (
@@ -80,7 +87,7 @@ const ProductDetails = () => {
                 >
                   More Details
                 </button>
-                <button class="btn btn-secondary ms-1">ADD TO CART</button>
+                
               </div>
             </div>
           ))}

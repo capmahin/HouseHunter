@@ -15,7 +15,7 @@ const Orders = () => {
       setProducts(data.products);
     } catch (error) {
       console.log(error);
-      toast.error("Someething Went Wrong");
+      toast.error("Something Went Wrong");
     }
   };
 
@@ -30,7 +30,7 @@ const Orders = () => {
           <UserMenu />
         </div>
         <div className="col-md-9 ">
-          <h1 className="text-center">All Products List</h1>
+          <h1 className="text-center">All Booking Houses List</h1>
           <div className="d-flex">
             {products?.map((p) => (
               <Link
@@ -47,6 +47,7 @@ const Orders = () => {
                   <div className="card-body">
                     <h5 className="card-title">{p.name}</h5>
                     <p className="card-text">{p.phone}</p>
+                    <p className="card-text">{p.email}</p>
                   </div>
                 </div>
               </Link>
