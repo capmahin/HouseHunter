@@ -157,9 +157,7 @@ const HomePage = () => {
                   >
                     More Details
                   </button>
-                  <button className="btn btn-secondary ms-1">
-                    ADD TO CART
-                  </button>
+                  <button className="btn btn-success ms-1"  onClick={()=>navigate("/CreateBooking")} >Buy Now</button>
                 </div>
               </div>
             ))}

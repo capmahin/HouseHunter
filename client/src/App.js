@@ -13,14 +13,22 @@ import Orders from "./pages/user/Orders";
 import Profile from "./pages/user/Profile";
 import Products from "./pages/Admin/Products";
 import UpdateProduct from "./pages/Admin/UpdateProduct";
+import UpdateBooking from "./pages/user/UpdateBooking";
+import Search from "./pages/Search";
+// import ProductDetails from "./pages/ProductDetails";
+import CreateBooking from "./pages/CreateBooking";
+
 
 function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        {/* <Route path="/product/:slug" element={<ProductDetails />} /> */}
+        <Route path="/CreateBooking" element={<CreateBooking />} />
         <Route path="/dashboard" element={<PrivateRoute />}>
           <Route path="user" element={<Dashboard />} />
+          <Route path="user/order/:slug" element={<UpdateBooking />} />
           <Route path="user/orders" element={<Orders />} />
           <Route path="user/profile" element={<Profile />} />
         </Route>

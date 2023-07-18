@@ -1,10 +1,11 @@
 import bookingModel from "../models/bookingModel.js";
+import categoryModel from '../models/categoryModel.js'
 import fs from "fs";
 import slugify from "slugify";
 
 export const createBookingController = async (req, res) => {
   try {
-    const { name, email, phone, category} =
+    const { name, email, phone,category} =
       req.fields;
       const { photo } = req.files;
     
@@ -17,9 +18,11 @@ export const createBookingController = async (req, res) => {
       
       case !phone:
         return res.status(500).send({ error: "phone number is Required" });
-     
-      case !category:
-        return res.status(500).send({ error: "Category is Required" });
+
+        
+        case !category:
+          return res.status(500).send({error:'Category required'})
+      
         case photo && photo.size > 1000000:
         return res
           .status(500)
